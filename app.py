@@ -48,7 +48,7 @@ config = {
     "fixed_costs": st.sidebar.number_input("Monthly Fixed Costs (RM)", value=4000.0, step=100.0),
     "max_daily_capacity": st.sidebar.slider("Max Daily Sales (Pax)", 10, 500, 100),
     "operating_days": st.sidebar.number_input("Operating Days/Month", value=26),
-    "arpu_base": st.sidebar.number_input("Average Sales Per Customer (RM)", 5.0, 50.0, 8.90),
+    "arpu_base": st.sidebar.number_input("Average Sales Per Customer (RM)", min_value=1.0, max_value=None, value=8.90),
     "cogs_base_pct": st.sidebar.slider("COGS %", 0.1, 1.0, 0.5),
     "repayment_percentage": st.sidebar.slider("Repayment % (Take-home)", 0, 100, 100) / 100
 }
